@@ -1,0 +1,14 @@
+{
+  "name": "searchtool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "xlsx": "^0.8.0"
+  }
+}
