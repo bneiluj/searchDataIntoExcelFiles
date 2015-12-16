@@ -5,6 +5,7 @@ var filesPath = './files';
 var idsPath = 'ids.js';
 var Xlsx = require('xlsx');
 var numberOfIds = 0;
+var idsNotFound = [];
 
 // Init
 // Read ids
@@ -15,10 +16,10 @@ var files = fs.readdirSync(filesPath);
  * Seach function
  */
 function findString (ids) {
-    var idsNotFound = [];
     for (var i in ids) {
         // Make sure id is not null
         if (ids[i].length > 0) {
+          var idsFoundFlag = false;
           // Incremente ids
           numberOfIds += 1;
 
@@ -27,9 +28,13 @@ function findString (ids) {
               var workbook = JSON.stringify(Xlsx.readFile(filesPath + '/' + file));
               if (workbook.indexOf(ids[i]) != -1) {
                   console.log('id: ' + ids[i] + ' ' + 'found in file: ' + file);
-                  idsNotFound.push(ids[i]);
+                  idsFoundFlag = true;
               }
           })
+
+          if (!idsFoundFlag) {
+              idsNotFound.push(ids[i]);
+          }
         }
     }
     // Console logs
