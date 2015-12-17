@@ -1,8 +1,14 @@
 <!-- A Quick APP (made in 10min chrono for a friend)-->
+IT WAS BUILT AS A JOKE BUT IT HAS NOW BEEN USED IN BY FASHION WEB CONTENT PEOPLE
+
+The code is basic and was implemented very quickly. Do not take it seriously. This
+could have been implemented using a simple bash command line.
+
+#GOAL
 
 Get ids from a file and loop through all excel files
 
-Print the file name and id if id was found inside
+Print the name of the file where the id was found.
 
 #Run it
 node index.js
@@ -10,7 +16,7 @@ node index.js
 #Files
 Add excel files into files folder
 
-#ids
+#IDS
 Replace `ids` from the ids.js file
 
 #Result
