@@ -34,26 +34,24 @@ function findString (idsArray) {
     var ids = cleanUpIds(idsArray);
     // Loop through all ids
     for (var i in ids) {
-        // Make sure id is not null
-        if (ids[i].length > 0) {
-          var idsFoundFlag = false;
-          // Incremente ids
-          numberOfIds += 1;
+      // Make sure id is not null
+      var idsFoundFlag = false;
+      // Incremente ids
+      numberOfIds += 1;
 
-          // Files
-          files.forEach( function( file, index ) {
-              var workbook = JSON.stringify(Xlsx.readFile(filesPath + '/' + file));
-              // If id is found - can't stop the loop as ids are not unique
-              if (workbook.indexOf(ids[i]) != -1) {
-                  console.log('id: ' + ids[i] + ' ' + 'found in file: ' + file);
-                  idsFoundFlag = true;
-              }
-          })
-          // If id hasn't been found in any files
-          if (!idsFoundFlag) {
-              idsNotFound.push(ids[i]);
+      // Files
+      files.forEach( function( file, index ) {
+          var workbook = JSON.stringify(Xlsx.readFile(filesPath + '/' + file));
+          // If id is found - can't stop the loop as ids are not unique
+          if (workbook.indexOf(ids[i]) != -1) {
+              console.log('id: ' + ids[i] + ' ' + 'found in file: ' + file);
+              idsFoundFlag = true;
           }
-        }
+      })
+      // If id hasn't been found in any files
+      if (!idsFoundFlag) {
+          idsNotFound.push(ids[i]);
+      }
     }
 }
 
@@ -63,8 +61,8 @@ findString(ids);
 // Quick result
 console.log("**********RESULT***********");
 console.log("Script run on: " + numberOfIds + ' ids.');
+console.log("through: " + files.length + " files");
 if (idsNotFound.length > 0) {
     console.log('Those ids were not found: ', JSON.stringify(idsNotFound));
 }
-console.log("Number of files: ", files.length);
 console.log("******************************");
