@@ -5,9 +5,7 @@ The code is basic and was implemented very quickly. Do not take it seriously. Th
 could have been implemented using a simple bash command line.
 
 #GOAL
-
 Get ids from a file and loop through all excel files
-
 Print the name of the file where the id was found.
 
 #Run it
