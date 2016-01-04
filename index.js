@@ -5,6 +5,7 @@ var process = require( 'process' );
 var filesPath = './files';
 var idsPath = 'ids.js';
 var Xlsx = require('xlsx');
+
 // Variables
 var numberOfIds = 0;
 var idsNotFound = [];
