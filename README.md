@@ -1,6 +1,6 @@
 A Quick APP (made in 10min chrono for a friend in JS)
 
-The code is basic and was implemented very quickly. Do not take it seriously.
+The code is basic and was implemented very quickly.
 
 #GOAL
 Get ids from a file and loop through all excel files
