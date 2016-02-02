@@ -22,5 +22,3 @@ example:
 id: 625945-011 found in file: file3.xlsx
 id: 647581-005 found in file: file5.xlsx
 `
-
-[![ghit.me](https://ghit.me/badge.svg?repo=bneiluj/searchDataIntoExcelFiles)](https://ghit.me/repo/bneiluj/searchDataIntoExcelFiles)
